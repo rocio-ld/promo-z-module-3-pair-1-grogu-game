@@ -1,4 +1,5 @@
 //importar imagenes
+import '../scss/App.scss';
 
 function App() {
 //constantes 
