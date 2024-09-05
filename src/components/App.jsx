@@ -1,9 +1,15 @@
 //importar imagenes
+import { useState } from 'react';
 import '../scss/App.scss';
+
 
 function App() {
 //constantes 
-
+const [box,setbox] = useState (0);
+const [cookie,setCookie] = useState (['🍪','🍪','🍪']);
+const [egg,setegg] = useState (['🥚','🥚','🥚']);
+const [frog,setfrog] = useState (['🐸','🐸','🐸']);
+const [status, setStatus]= useState('En curso');
 
   
   return (
@@ -24,7 +30,7 @@ function App() {
 
       <section>
         <button className="dice">Lanzar Dado</button>
-        <div className="game-status">En curso</div>
+        <div className="game-status">{status}</div>
       </section>
 
       <section className="goods-container">
