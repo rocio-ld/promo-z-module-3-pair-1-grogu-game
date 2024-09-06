@@ -1,6 +1,9 @@
 //importar imagenes
 import { useState } from 'react';
 import '../scss/App.scss';
+import Header from './Header';
+import Board from './Board';
+
 
 
 function App() {
@@ -14,20 +17,10 @@ const [status, setStatus]= useState('En curso');
   
   return (
   <div className="page">
-    <header>
-      <h1>¡Cuidado con Grogu!</h1>
-    </header>
+    <Header/>
     <main className="page">
-      <section className="board">
-        <div className="cell"><div className="grogu">👣</div></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-      </section>
-
+     <Board />
+     
       <section>
         <button className="dice">Lanzar Dado</button>
         <div className="game-status">{status}</div>
