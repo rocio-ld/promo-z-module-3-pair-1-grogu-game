@@ -1,7 +1,8 @@
+import Grogu from './Grogu';
 function Board (){
     return(
         <section className="board">
-        <div className="cell"><div className="grogu">👣</div></div>
+        <div className="cell"><Grogu/></div>
         <div className="cell"></div>
         <div className="cell"></div>
         <div className="cell"></div>
