@@ -1,14 +1,15 @@
 import Grogu from './Grogu';
-function Board (){
+function Board ({box}){
+//const array=[null,null,null,null,null,null,null]
     return(
         <section className="board">
-        <div className="cell"><Grogu/></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
+          {Array(7).fill(null).map((item,index)=>(
+              <div key={index} className="cell">
+                {index===box?<Grogu/> : null}
+              </div>
+          ))}
+        
+       
       </section>
     )
 }

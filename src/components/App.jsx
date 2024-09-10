@@ -4,6 +4,8 @@ import '../scss/App.scss';
 import Header from './Header';
 import Board from './Board';
 import Container from './Container';
+import Dice from './Dice';
+
 
 
 
@@ -37,10 +39,10 @@ const rollDice=()=>{
   <div className="page">
     <Header/>
     <main className="page">
-     <Board />
+     <Board box={box} />
      
       <section>
-        <button className="dice" onClick={rollDice}>Lanzar Dado</button>
+       <Dice rollDice={rollDice}/>
         <div className="game-status">{status}</div>
       </section>
      <Container item={cookie}/>
