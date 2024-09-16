@@ -7,7 +7,8 @@ import Container from './Container';
 import Dice from './Dice';
 import Form from './Form';
 import GameStatus from './GameStatus';
-//import { useEffect } from 'react';
+import { useEffect } from 'react';
+import Footer from './Footer';
 
 
 
@@ -39,34 +40,37 @@ const rollDice=()=>{
       setStatus("Se ha descargado una rana ")
     }
   }
-/*useEffect(()=>{
-
-})*/
-  
+ 
+ useEffect(() => {
+  if (box === 6) {
+    setStatus('¡¡Grogu se ha comido el cargamento!! Has perdido');
+   }else {
+    setStatus('Ganaste, Mando completa la misión');
+  }
+}, [box]);
   return (
-  <div className="page">
-    <Header/>
-    <main className="page">
-     <Board box={box} />
-     
-      <section>
-       <Dice rollDice={rollDice}/>
-        <GameStatus status={status} name={name}/>
-      </section>
-     <Container item={cookie}/>
-     <Container item={egg}/>
-     <Container item={frog}/>
-      <section>
-        <button className="restart-button">Reiniciar Juego</button>
-      </section>
-    </main>
-    <Form setName={setName} name={name}/>
-        
-    </div>
+    <div className="page">
+      <Header/>
+      <main className="page">
+      <Board box={box} />
+      
+        <section>
+        <Dice rollDice={rollDice}/>
+          <GameStatus status={status} name={name}/>
+        </section>
+      <Container item={cookie}/>
+      <Container item={egg}/>
+      <Container item={frog}/>
+        <section>
+          <button className="restart-button">Reiniciar Juego</button>
+        </section>
+      </main>
+      <Footer/>
+      <Form setName={setName} name={name}/>
+     </div>   
   )
 }
-
-export default App;
+  export default App;
 
 
 

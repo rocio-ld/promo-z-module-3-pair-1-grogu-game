@@ -2,7 +2,7 @@ function Container ({item}){
 
     return(
         <section className="goods-container">
-            {item.map((eachItem)=><div className="goods-item">{eachItem}</div>)}
+            {item.map((eachItem, i)=><div className="goods-item" key={i}>{eachItem}</div>)}
       </section>
     )
 }
