@@ -9,6 +9,8 @@ import Form from './Form';
 import GameStatus from './GameStatus';
 import { useEffect } from 'react';
 import Footer from './Footer';
+import Navlink from './Navlink';
+import { Route } from 'react-router-dom';
 
 
 
@@ -51,6 +53,10 @@ const rollDice=()=>{
   return (
     <div className="page">
       <Header/>
+
+      <Routes>
+       < Route path=""></Route>
+      </Routes>
       <main className="page">
       <Board box={box} />
       
